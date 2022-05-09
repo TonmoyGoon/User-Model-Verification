@@ -2,22 +2,13 @@ import { useState } from 'react';
 import './App.css';
 
 import AddUser from './components/Users/AddUser';
+import UserList from './components/Users/UserList';
 
 function App() {
-
-    const [userName, setUserName] = useState([
-        { text: "Harry", id: 1 },
-        { text: "Tamim", id: 2 }
-    ])
-
-    const [userAge, setUserAge] = useState([
-        { text: "24 years old", id: 1 },
-        { text: "33 years old", id: 2 }
-    ])
-
     return (
         <div>
             <AddUser />
+            <UserList users={[]} />
         </div>
     );
 }
