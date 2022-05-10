@@ -5,10 +5,19 @@ import AddUser from './components/Users/AddUser';
 import UserList from './components/Users/UserList';
 
 function App() {
+
+    const [usersList, setUsersList] = useState([]);
+
+    const addUserHandler = (uName, uAge) => {
+        setUsersList((prevUesrsList) => {
+            return [...prevUesrsList, { id: Math.random().toString(), name: uName, age: uAge }];
+        })
+    }
+
     return (
         <div>
-            <AddUser />
-            <UserList users={[]} />
+            <AddUser onAddUser={addUserHandler} />
+            <UserList users={usersList} />
         </div>
     );
 }
