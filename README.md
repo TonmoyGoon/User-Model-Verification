@@ -10,7 +10,7 @@ User Model Verification website can render users data.This site can also catch a
 
 ## 🚀 About Me
 
-I'm a Full Stack Web Developer specialized on MERN stack. I have been working(learning) in this stack for almost 2+ years. As I have learned all about programming through different online platforms I faced a lot of problems everyday. So I know how to Google effectively and find exact solution and I believe that's one of the most important skills a programmer must have. Besides I have also intermediate knowledge on testing, deploying web apps/websites on different platforms, Git, Github and other necessary tools to build a dynamic, interactive and fully responsive modern web apps.
+I'm a Full Stack Web Developer specialized on **MERN stack**. I have been working(learning) in this stack for almost **2+ years**. As I have learned all about programming through different online platforms I faced a lot of problems everyday. So I know **how to Google effectively and find exact solution** and I believe that's one of the most important skills a programmer must have. Besides I have also intermediate knowledge on **testing, deploying any kind of web apps/websites** on different platforms **(Netlify, Heroku, Firebase), Git, Github** and other necessary tools **to build a dynamic, interactive and fully responsive modern web apps.**
 
 ## Features
 
@@ -38,4 +38,6 @@ I'm a Full Stack Web Developer specialized on MERN stack. I have been working(le
 😄 Pronouns-Goon
 
 ⚡️ Fun fact I love to watch cricket match inside stadium
+
+
 
