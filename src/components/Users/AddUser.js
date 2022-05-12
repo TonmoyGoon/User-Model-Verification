@@ -9,6 +9,7 @@ const AddUser = props => {
 
     const [enteredUserName, setEnteredUserName] = useState("");
     const [enteredUserAge, setEnteredUserAge] = useState("");
+    const [error, setError] = useState();
 
     const usernameChangeHandler = (event) => {
         setEnteredUserName(event.target.value)
@@ -21,9 +22,17 @@ const AddUser = props => {
     const addUserHandler = (event) => {
         event.preventDefault();
         if (enteredUserName.trim().length === 0 || enteredUserAge.trim().length === 0) {
+            setError({
+                title: "Invalid Input",
+                message: "Please enter a valid name and age (non empty values)."
+            })
             return;
         }
         if (+enteredUserAge < 1) {
+            setError({
+                title: "Invalid age",
+                message: "Please enter a valid age (> 0)."
+            })
             return;
         }
         props.onAddUser(enteredUserName, enteredUserAge);
@@ -31,9 +40,21 @@ const AddUser = props => {
         setEnteredUserAge("");
     }
 
+    // When anyone clicks on the backdrop/"Okay" button error message vanish.
+
+    const errorHandler = () => {
+        setError(null);
+    }
+
     return (
         <div>
-            <ErrorModal title="An error occured" message="Something went wrong!!"></ErrorModal>
+
+            {error && <ErrorModal
+                title={error.title}
+                message={error.message}
+                onConfirm={errorHandler}>
+            </ErrorModal>}
+
             <Card className={classes.input}>
                 <form onSubmit={addUserHandler}>
                     <label htmlFor="username">Username</label>
