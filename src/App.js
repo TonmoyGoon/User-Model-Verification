@@ -15,10 +15,11 @@ function App() {
     }
 
     return (
-        <div>
+        // <React.Fragment></React.Fragment>    /     <Fragment></Fragment> works as a wrapper
+        <>
             <AddUser onAddUser={addUserHandler} />
             <UserList users={usersList} />
-        </div>
+        </>
     );
 }
 
